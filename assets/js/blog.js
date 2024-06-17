@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const postsContainer = document.getElementById('posts');
     const comments = JSON.parse(localStorage.getItem('comments')) || [];
 
+    // Sort comments by timestamp, newest first
+    comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
     comments.forEach(comment => {
         const postElement = document.createElement('div');
         postElement.classList.add('post');
