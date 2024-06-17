@@ -2,9 +2,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease;
 }
 
 .container {
@@ -12,6 +12,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+    transition: background-color 0.3s ease;
 }
 
 /* Header styles */
@@ -57,4 +58,25 @@ footer .contact a {
 
 footer .contact a:hover {
     text-decoration: underline;
+}
+
+/* Light mode */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container.light-mode {
+    background-color: #fff;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.container.dark-mode {
+    background-color: #444;
+    color: #fff;
 }
