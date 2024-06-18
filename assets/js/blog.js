@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const postsContainer = document.getElementById('posts');
     const comments = JSON.parse(localStorage.getItem('comments')) || [];
 
+    // Sort comments by timestamp (oldest first)
+    comments.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
     comments.forEach(comment => {
         const postElement = document.createElement('div');
         postElement.classList.add('post');
@@ -23,5 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
         postElement.appendChild(commentElement);
 
         postsContainer.appendChild(postElement);
+    });
+
+    document.getElementById('back-to-form').addEventListener('click', function() {
+        window.location.href = 'index.html';
     });
 });

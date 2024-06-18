@@ -1,5 +1,27 @@
 /* Specific styles for blog posts */
 
+header .header-buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+header .header-buttons button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    top: 20px;
+}
+
+header .header-buttons button:hover {
+    background-color: #218838;
+}
+
 h2 {
     text-align: center;
     color: #333;
