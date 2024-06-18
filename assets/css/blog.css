@@ -30,3 +30,43 @@ h2 {
     font-size: 16px;
     color: #555;
 }
+
+/* Light mode */
+
+body.light-mode h2 {
+    color: #333;
+}
+
+body.light-mode .post-title {
+    color: #333;
+}
+
+body.light-mode .post-username {
+    color: #777;
+}
+
+body.light-mode .post-comment {
+    color: #555;
+}
+
+/* Dark mode */
+
+body.dark-mode h2 {
+    color: #fff;
+}
+
+body.dark-mode .post {
+    border-color: #444;
+}
+
+body.dark-mode .post-title {
+    color: #fff;
+}
+
+body.dark-mode .post-username {
+    color: #bbb;
+}
+
+body.dark-mode .post-comment {
+    color: #ddd;
+}

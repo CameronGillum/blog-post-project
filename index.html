@@ -9,14 +9,22 @@
 </head>
 <body>
     <header>
-        <button id="theme-toggle">Toggle Theme</button>
+        <div class="container">
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-slider">
+                <label for="theme-slider" class="slider">
+                    <span class="sun">☀️</span>
+                    <span class="moon">🌙</span>
+                </label>
+            </div>
+        </div>
     </header>
-    <div class="container">
+    <div class="container form-container">
         <div class="image-section">
             <img src="./assets/images/landing-page.jpg" alt="Image Description">
         </div>
         <div class="form-section">
-            <h1>Leave a Comment</h1>
+            <h2>Leave a Comment</h2>
             <form id="commentForm">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -24,7 +32,7 @@
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" required>
 
-                <label for="comment">Descripion:</label>
+                <label for="comment">Description:</label>
                 <textarea id="comment" name="comment" rows="4" required></textarea>
 
                 <button type="submit">Submit</button>

@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -12,58 +12,96 @@ body {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
-    transition: background-color 0.3s ease;
 }
-
-/* Header styles */
 
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
 header h1 {
     margin: 0;
 }
 
-/* Footer styles */
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
 }
 
-footer .contact {
-    margin-top: 20px;
-    text-align: left;
+.theme-toggle input {
+    display: none;
 }
 
-footer .contact h3 {
-    margin-bottom: 10px;
+.theme-toggle .slider {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-footer .contact p {
-    margin: 0;
+.theme-toggle .slider:before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle input:checked + .slider {
+    background-color: #666;
+}
+
+.theme-toggle input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+.theme-toggle .sun,
+.theme-toggle .moon {
+    position: absolute;
     font-size: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
-footer .contact a {
+.theme-toggle .sun {
+    left: 8px;
+    color: #ffdd57;
+}
+
+.theme-toggle .moon {
+    right: 8px;
     color: #fff;
-    text-decoration: none;
-}
-
-footer .contact a:hover {
-    text-decoration: underline;
 }
 
 /* Light mode */
+
 body.light-mode {
     background-color: #f0f0f0;
     color: #333;
+}
+
+
+header.light-mode,
+footer.light-mode {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
 .container.light-mode {
@@ -71,7 +109,18 @@ body.light-mode {
 }
 
 /* Dark mode */
+
 body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .theme-toggle .slider {
+    background-color: #ccc;
+}
+
+header.dark-mode,
+footer.dark-mode {
     background-color: #333;
     color: #fff;
 }

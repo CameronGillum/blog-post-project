@@ -11,27 +11,29 @@
     <header>
         <div class="container">
             <h1>My First Blog</h1>
-            <button id="theme-toggle">Toggle Theme</button>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-slider">
+                <label for="theme-slider" class="slider">
+                    <span class="sun">☀️</span>
+                    <span class="moon">🌙</span>
+                </label>
+            </div>
         </div>
     </header>
-
     <div class="container">
         <h2>Blog Posts</h2>
         <div id="posts">
             <!-- Blog posts will be dynamically inserted here -->
         </div>
     </div>
-
     <footer>
         <div class="container">
-            <p>Made by Cameron Gillum</p>
             <div class="contact">
                 <h3>Contact</h3>
                 <p>Email: <a href="mailto:GillumTCameron@gmail.com">GillumTCameron@gmail.com</a></p>
             </div>
         </div>
     </footer>
-
     <script src="./assets/js/logic.js"></script>
     <script src="./assets/js/blog.js"></script>
 </body>
